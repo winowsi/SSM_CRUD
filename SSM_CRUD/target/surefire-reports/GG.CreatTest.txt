@@ -1,0 +1,15 @@
+-------------------------------------------------------------------------------
+Test set: GG.CreatTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 33.485 s <<< FAILURE! - in GG.CreatTest
+testPage(GG.CreatTest)  Time elapsed: 30.532 s  <<< ERROR!
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is org.springframework.transaction.CannotCreateTransactionException: Could not open JDBC Connection for transaction; nested exception is java.sql.SQLException: Connections could not be acquired from the underlying database!
+	at GG.CreatTest.testPage(CreatTest.java:44)
+Caused by: org.springframework.transaction.CannotCreateTransactionException: Could not open JDBC Connection for transaction; nested exception is java.sql.SQLException: Connections could not be acquired from the underlying database!
+	at GG.CreatTest.testPage(CreatTest.java:44)
+Caused by: java.sql.SQLException: Connections could not be acquired from the underlying database!
+	at GG.CreatTest.testPage(CreatTest.java:44)
+Caused by: com.mchange.v2.resourcepool.CannotAcquireResourceException: A ResourcePool could not acquire a resource from its primary factory or source.
+	at GG.CreatTest.testPage(CreatTest.java:44)
+Caused by: java.sql.SQLNonTransientConnectionException: Public Key Retrieval is not allowed
+
